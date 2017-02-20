@@ -1,19 +1,14 @@
-# React.JS-Redux-Django-DRF Starter Kit
+# Step 00. Setup Requirements
 
-This repository is a starter kit to easily get a Django & React web app up and running. This is a skeleton with the basic functionality that uses Django as the backend and ReactJS as the front end. Follow the tutorial to learn how to set this up yourself.
+We need to first create a Django application. I assume that you have everything all setup from Step 00. We let Django take care of creating our skeleton app.
 
-**Technogoies Used**
-React, Redux, Django, Django Rest Framework
+```python
+django-admin startproject djangoreactstarter
+```
 
-# Frontend Technologies
-React
-React Router
-Babel
-Webpack
-Redux
-Enzyme
+We need to create `requirements.txt` and put `Django==1.10.5`. Pip is similar to `package.json`. Here is some documentation about pip.
 
-# Backend Technologies
-Django
-Django Rest Framework
+To verify that this step works, run `python manage.py runserver` in the root folder and you should be able to see a welcome screen in `http://localhost:8000`
+
+Step 01
 
