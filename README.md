@@ -1,14 +1,39 @@
 # Step 00. Setup Requirements
 
-We need to first create a Django application. I assume that you have everything all setup from Step 00. We let Django take care of creating our skeleton app.
+This setup assumes you are working with a Mac computer. If you are not working on a Mac, the main things that need to be installed are `Python3` and `Pyvenv`
 
-```python
-django-admin startproject djangoreactstarter
+**Install Homebrew/XCode**
+
+First we install Command Line Tools for Xcode. Open a terminal and type:
 ```
+xcode-select --install
+```
+This should prompt a window that will install the Command Line Tools.
 
-We need to create `requirements.txt` and put `Django==1.10.5`. Pip is similar to `package.json`. Here is some documentation about pip.
+Next, we need to install Homebrew. In your terminal, type:
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+Close the terminal and the installations should be finished.
 
-To verify that this step works, run `python manage.py runserver` in the root folder and you should be able to see a welcome screen in `http://localhost:8000`
+**Install Python 3**
 
-Step 01
+Now that we have Homebrew install, we're going to use Homebrew to install Python3. Open a terminal and type:
+```
+brew install python3
+```
+You can now try running `python3 --version` to make sure everything is installed properly.
+
+**Virtual Environment with Pyenv**
+
+Now that Python 3 is installed, it should come pre-installed with a virtual environment.
+Virtual environments is a tool that helps you separate different projects by keeping the dependencies separately and thus more manageable. We're going to want to create a environment that is initialized to Python 3. So go into your project directory, and in the terminal type:
+```python
+virtualenv -p python3 envname
+```
+You should see in the terminal with (envname) to the left of the terminal prompt.
+
+If all goes well without error, you are done with Step 0!
+
+Go to [Step 01](https://github.com/MikeTYChen/django-reactjs-starter/tree/step01-django-project)
 
