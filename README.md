@@ -1,6 +1,6 @@
 # Step 01. Creating the Django App
 
-We need to first create a Django application. I assume that you have everything all setup from Step 00. We let Django take care of creating our skeleton app.
+We need to first create a Django application. I assume that you have everything all setup from [Step 00](https://github.com/MikeTYChen/django-reactjs-starter/tree/step00-install-requirements). We let Django take care of creating our skeleton app.
 
 ```python
 django-admin startproject djangoreactstarter
