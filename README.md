@@ -24,14 +24,28 @@ brew install python3
 ```
 You can now try running `python3 --version` to make sure everything is installed properly.
 
-**Virtual Environment with Pyenv**
+**Install Virtual Environment**
 
-Now that Python 3 is installed, it should come pre-installed with a virtual environment.
-Virtual environments is a tool that helps you separate different projects by keeping the dependencies separately and thus more manageable. We're going to want to create a environment that is initialized to Python 3. So go into your project directory, and in the terminal type:
+Now we want to install virtual environment. Virtual environments is a tool that helps you separate different projects by keeping the dependencies separately and thus more manageable. 
+```python
+pip install virtualenv
+```
+
+**Create Virtual Environment**
+
+Now that the virtual environment is installed, we're going to want to create a environment that is initialized to Python 3. So go into your project directory, and in the terminal type:
 ```python
 virtualenv -p python3 envname
+source envname/bin/activate
 ```
 You should see in the terminal with (envname) to the left of the terminal prompt.
+
+**Install Django**
+
+Now that we are in our virtual environment.  We should install Django(latest at the time of writing is 1.10.5). First create a `requirements.txt` file in the project directory. In the file add `Django==1.10.5` and return to the terminal and type:
+```python
+pip install -r requirements.txt
+```
 
 If all goes well without error, you are done with Step 0!
 
