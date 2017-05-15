@@ -28,9 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
-INSTALLED_APPS = [
+# Application definitions
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
+
+PERSONAL_APPS = [
+    'training',
+]
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PERSONAL_APPS
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+APPEND_SLASH = True
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
